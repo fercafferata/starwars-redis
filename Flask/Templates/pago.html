@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color:lightskyblue;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,33 +16,20 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href='/cargar'>Cargar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href='/eliminar'>Eliminar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href='/listar'>Listar</a>
+                <a class="nav-link" href='/pago'>Pagar</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <h2 style="padding: 16px;">Listar Personajes</h2>
-      <form action="/listar" method="post">
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <select name="episodio" class="form-select form-select-sm" aria-label=".form-select-sm example">
-              {{#each episodios}}
-                <option>{{this}}</option>
-              {{/each}}
-            </select>
-          </div>
-          <button style="align-items: center; width: 90px; background-color: blue; color: white;">Listar</button>
-        </div> 
-      </form>
+    <div style="text-align: center;">
+        <h2>Confirmar pago</h2>
+        <h5>El total a pagar es: $....</h5>
+        <button style="align-items: center; width: 90px; background-color: blue; color: white;">Pagar</button>
+    </div>
+    
 </body>
 </html>

@@ -33,12 +33,9 @@
       </nav>
       <h2 style="padding: 16px"> Episodios de la saga Star Wars </h2>
       <ul style="padding-left: 50px; line-height: 30px;"> 
-        <li>Episodio 1</li>
-        <li>Episodio 2</li>
-        <li>Episodio 3</li>
-        <li>Episodio 4</li>
-        <li>Episodio 5</li>  
+        {{#each episodios}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
-    <script src="../app.js"></script>
-</body>
+  </body>
 </html>

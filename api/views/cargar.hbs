@@ -32,23 +32,23 @@
         </div>
       </nav>
       <h2 style="padding: 16px;"> Cargar Personajes</h2>
-      <form>
+      <form action="/cargar" method="POST">
         <div class="row justify-content-center">
           <div class="col-4">
-            Personaje <input type="text">
+            <label>Personaje</label>
+            <input type="text">
           </div>
           <div class="col-4">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-              <option selected>Seleccione un episodio</option>
-              <option value="1">Episodio 1</option>
-              <option value="2">Episodio 2</option>
-              <option value="3">Episodio 3</option>
-              <option value="4">Episodio 4</option>
-              <option value="5">Episodio 5</option>
+            <label>Episodio</label>
+            <select>
+              {{#each episodios}}
+                <option>{{this}}</option>
+              {{/each}}
             </select>
+            <button style="align-items: center; width: 90px; background-color: blue; color: white;", type="submit" id="cargarpersonaje">Cargar</button>          
           </div>
-          <button style="align-items: center; width: 90px; background-color: blue; color: white;">Cargar</button>
+          </div>
         </div> 
       </form>
 </body>
-</html>
+</html> 
